@@ -6,3 +6,4 @@ onnxruntime.dll
 vcomp140.dll
 node_modules/
 release-builds/
+.idea/
