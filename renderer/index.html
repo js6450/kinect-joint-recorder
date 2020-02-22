@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinect Joint Recorder</title>
+    <script src="lib/p5.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="lib/material.min.css">
+    <script src="lib/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    p{
+        margin: 0 0 5px;
+        font-size: 13px;
+    }
+
+    #controls{
+        width: calc(18% - 2em);
+        float: left;
+        margin: 1em;
+        font-size: 13px;
+    }
+    canvas{
+        float: right;
+    }
+
+    .mdl-button{
+        font-size: 11px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 8px;
+        margin-right: 6px;
+    }
+
+
+</style>
+<body>
+    <div id="controls">
+        <div class="controls-div">
+            <p><b>Play Mode</b>: <span id="play">Live</span></p>
+            <button class="mdl-button mdl-js-button mdl-button--raised" onclick="cvs.clear(); cvs.background(0); openSaved();">Open Saved</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised" onclick="liveMode = true; cvs.clear(); cvs.background(0); document.getElementById('play').innerHTML = 'Live';">Live Feed</button>
+        </div>
+        <hr>
+        <div class="controls-div">
+            <p><b>View Mode</b>: <span id="view">Joints</span></p>
+            <button class="mdl-button mdl-js-button mdl-button--raised" onclick="resetMode(0)">Joints</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised" onclick="resetMode(1);">Paint</button>
+        </div>
+        <hr>
+       <div class="controls-div">
+           <p><b>Save Joints</b>: <span id="rec">Not Saving</span></p>
+           <button class="mdl-button mdl-js-button mdl-button--raised" onclick="startRec()">Start</button>
+           <button class="mdl-button mdl-js-button mdl-button--raised" onclick="saveToFile()">Stop</button>
+       </div>
+        <hr>
+        <div class="controls-div">
+            <p><b>Render Video</b>: <span id="vid">Not Recording</span></p>
+            <button class="mdl-button mdl-js-button mdl-button--raised" onclick="renderVideo()">Start</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised" onclick="stopRender()">Stop</button>
+        </div>
+    </div>
+</body>
+</html>
