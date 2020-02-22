@@ -3,6 +3,8 @@ Desktop application for viewing and recording joints with Azure Kinect built wit
 
 Download release [here](https://github.com/js6450/kinect-joint-recorder/releases).
 
+![screen capture of joint recorder and viewer](assets/capture.png)
+
 ## Requirements
 * Windows OS
 * [Azure Kinect sensor SDK](https://docs.microsoft.com/en-us/azure/kinect-dk/sensor-sdk-download) and [Body Tracking SDK](https://docs.microsoft.com/en-us/azure/kinect-dk/body-sdk-download)
