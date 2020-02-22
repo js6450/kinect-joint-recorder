@@ -1,1 +1,2 @@
-# Joint Viewer and Recorder for Kinect Azure
+# kinect-joint-recorder
+Desktop application for viewing and recording joints with Azure Kinect
