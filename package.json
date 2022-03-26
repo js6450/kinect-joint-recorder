@@ -14,7 +14,7 @@
     "async": "^3.1.1",
     "kinect-azure": "0.0.12",
     "kinect2": "^0.1.7",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.6"
   },
   "devDependencies": {
     "electron": "^8.0.1",
